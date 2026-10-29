@@ -1,0 +1,161 @@
+/* -----------------------------------------------------------
+   Drake Miesel — bartending portfolio
+   Edit this file to change colors, spacing, typography, and layout.
+   ----------------------------------------------------------- */
+
+:root {
+  --paper: #f6f4ef;
+  --paper-deep: #ebe7dd;
+  --ink: #262822;
+  --muted: #686a60;
+  --line: #d9d6cc;
+  --olive: #73755d;
+  --dark: #292d28;
+  --dark-muted: #b8b9ad;
+  --serif: "Playfair Display", Georgia, serif;
+  --sans: "DM Sans", Arial, sans-serif;
+  --wrap: 1120px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.65; }
+a { color: inherit; }
+button { font: inherit; }
+button:focus-visible, a:focus-visible { outline: 3px solid #a6a57b; outline-offset: 4px; }
+.skip-link { position: absolute; top: -60px; left: 1rem; background: white; padding: .7rem 1rem; z-index: 100; }
+.skip-link:focus { top: 1rem; }
+.section-wrap { width: min(var(--wrap), calc(100% - 64px)); margin-inline: auto; }
+.site-header { height: 82px; display: flex; align-items: center; justify-content: space-between; width: min(var(--wrap), calc(100% - 64px)); margin: auto; border-bottom: 1px solid var(--line); }
+.wordmark { font: 600 1.55rem var(--serif); text-decoration: none; letter-spacing: -.06em; }
+.wordmark span { color: var(--olive); }
+.site-header nav { display: flex; align-items: center; gap: clamp(16px, 3vw, 38px); }
+.site-header nav a, .back-top { font-size: .78rem; text-decoration: none; color: var(--muted); transition: color .2s ease; }
+.site-header nav a:hover, .back-top:hover { color: var(--ink); }
+.hero { display: grid; grid-template-columns: 1.08fr .92fr; gap: clamp(42px, 8vw, 110px); align-items: center; padding-block: 86px 100px; }
+.eyebrow { margin: 0 0 18px; font-size: .68rem; font-weight: 700; letter-spacing: .17em; line-height: 1.4; color: var(--olive); }
+h1, h2, p { margin-top: 0; }
+h1, h2 { font-family: var(--serif); font-weight: 400; letter-spacing: -.045em; line-height: 1.13; }
+h1 { font-size: clamp(3rem, 6.1vw, 5.5rem); margin-bottom: 27px; }
+h1 em { color: var(--olive); font-weight: 400; }
+.hero-intro { max-width: 510px; color: var(--muted); font-size: 1.02rem; line-height: 1.8; }
+.hero-actions, .contact-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 22px; margin-top: 30px; }
+.button { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; gap: 20px; padding: 12px 19px; border: 1px solid transparent; text-decoration: none; font-size: .8rem; font-weight: 600; cursor: pointer; transition: transform .2s ease, background .2s ease; }
+.button:hover { transform: translateY(-2px); }
+.button-dark { background: var(--dark); color: #fff; }
+.button-dark:hover { background: #42483f; }
+.text-link { font-size: .82rem; font-weight: 600; text-decoration: none; border-bottom: 1px solid var(--olive); padding-bottom: 5px; }
+.hero-note { margin: 26px 0 0; font-size: .74rem; color: var(--muted); }
+.portrait-frame { max-width: 430px; justify-self: end; width: 100%; }
+.portrait-placeholder { min-height: 475px; aspect-ratio: 4 / 5; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; background: linear-gradient(145deg, #dedbd0, #c6c5b7); color: #5c5e50; }
+.placeholder-mark { font: 400 clamp(5rem, 10vw, 8rem) var(--serif); letter-spacing: -.1em; }
+.placeholder-caption { font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; }
+.portrait-image { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+.portrait-label { padding-top: 13px; font-size: .72rem; color: var(--muted); display: flex; gap: 9px; align-items: center; }
+.small-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--olive); }
+.intro-band { background: var(--paper-deep); }
+.intro-band-inner { padding-block: 64px 68px; }
+.statement { max-width: 870px; font: 400 clamp(1.6rem, 3vw, 2.65rem)/1.35 var(--serif); letter-spacing: -.025em; margin-bottom: 23px; }
+.inline-trigger { border: 0; padding: 0 0 5px; border-bottom: 1px solid var(--olive); background: transparent; cursor: pointer; font-size: .8rem; font-weight: 600; }
+.inline-trigger span { margin-left: 12px; }
+.section-block { padding-block: 95px 100px; }
+.section-heading { display: flex; align-items: end; justify-content: space-between; gap: 40px; margin-bottom: 42px; }
+.section-heading h2, .education-inner h2, .contact-section h2 { font-size: clamp(2.3rem, 4.2vw, 3.7rem); margin-bottom: 0; }
+.section-summary { max-width: 390px; color: var(--muted); font-size: .9rem; margin-bottom: 3px; }
+.principle-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.principle-card { display: flex; flex-direction: column; align-items: flex-start; text-align: left; min-height: 235px; padding: 28px 28px 24px 0; border: 0; background: transparent; cursor: pointer; }
+.principle-card + .principle-card { border-left: 1px solid var(--line); padding-left: 28px; }
+.card-number { color: var(--olive); font-size: .68rem; letter-spacing: .12em; margin-bottom: 22px; }
+.card-title { font: 400 1.65rem var(--serif); margin-bottom: 10px; }
+.card-copy { max-width: 290px; font-size: .82rem; line-height: 1.7; color: var(--muted); }
+.card-more { margin-top: auto; padding-top: 20px; font-size: .75rem; font-weight: 600; }
+.card-more span { padding-left: 8px; color: var(--olive); }
+.principle-card:hover .card-title, .cocktail-card:hover strong { color: var(--olive); }
+.dark-section { background: var(--dark); color: #f5f3ed; }
+.section-heading-light .eyebrow { color: #c0c1a1; }
+.section-heading-light .section-summary { color: var(--dark-muted); }
+.experience-list { border-top: 1px solid #53584e; }
+.experience-row { display: grid; grid-template-columns: 50px 1.1fr 1fr 22px; gap: 20px; align-items: center; width: 100%; padding: 26px 0; border: 0; border-bottom: 1px solid #53584e; color: inherit; background: transparent; text-align: left; cursor: pointer; }
+.experience-index { font-size: .72rem; color: #c0c1a1; }
+.experience-main strong, .experience-main small { display: block; }
+.experience-main strong { font: 400 1.3rem var(--serif); }
+.experience-main small { margin-top: 5px; color: var(--dark-muted); font-size: .72rem; }
+.experience-desc { color: var(--dark-muted); font-size: .78rem; }
+.row-arrow { justify-self: end; transition: transform .2s ease; }
+.experience-row:hover .row-arrow { transform: translate(3px, -3px); }
+.cocktail-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.cocktail-card { padding: 0; border: 0; background: transparent; text-align: left; cursor: pointer; min-width: 0; }
+.drink-image { aspect-ratio: 4 / 4.5; display: grid; place-items: center; overflow: hidden; position: relative; transition: filter .2s ease; }
+.drink-image-one { background: linear-gradient(145deg, #d6d0bf, #aaa991); }
+.drink-image-two { background: linear-gradient(145deg, #ded4c8, #b8a58f); }
+.drink-image-three { background: linear-gradient(145deg, #d4d7cb, #9da28d); }
+.image-placeholder-label { padding: 9px 12px; background: rgba(246,244,239,.76); color: #41443b; font-size: .68rem; letter-spacing: .06em; }
+.cocktail-card-text { display: flex; flex-direction: column; align-items: flex-start; padding-top: 19px; }
+.cocktail-card-text .eyebrow { font-size: .6rem; margin-bottom: 9px; }
+.cocktail-card-text strong { font: 400 1.35rem var(--serif); transition: color .2s ease; }
+.cocktail-card-text .card-more { padding-top: 12px; }
+.fine-print { margin: 25px 0 0; font-size: .72rem; color: var(--muted); }
+.education-band { background: var(--paper-deep); }
+.education-inner { padding-block: 65px; display: grid; grid-template-columns: .9fr 1.1fr; gap: 70px; align-items: start; }
+.education-inner h2 { max-width: 390px; font-size: clamp(2rem, 3.5vw, 3rem); }
+.education-details { display: grid; grid-template-columns: 1fr 1fr; gap: 22px 30px; }
+.education-details p { font-size: .78rem; color: var(--muted); margin: 0; }
+.education-details strong { display: inline-block; color: var(--ink); margin-bottom: 5px; font-size: .83rem; }
+.contact-section { padding-block: 100px 110px; }
+.contact-section h2 { max-width: 650px; }
+.contact-copy { max-width: 590px; color: var(--muted); margin: 22px 0 0; }
+.privacy-note { margin-top: 28px; max-width: 550px; font-size: .7rem; color: var(--muted); }
+.site-footer { width: min(var(--wrap), calc(100% - 64px)); margin: auto; border-top: 1px solid var(--line); min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.site-footer > span { color: var(--muted); font-size: .7rem; }
+.back-top { font-size: .72rem; }
+
+/* Native dialog provides keyboard focus handling and Escape-to-close support. */
+.detail-modal { width: min(610px, calc(100% - 30px)); max-height: min(82vh, 760px); overflow-y: auto; border: 1px solid var(--line); padding: clamp(24px, 5vw, 46px); background: var(--paper); color: var(--ink); box-shadow: 0 20px 80px rgba(0,0,0,.24); }
+.detail-modal::backdrop { background: rgba(24, 27, 23, .68); backdrop-filter: blur(3px); }
+.modal-topline { display: flex; align-items: start; justify-content: space-between; gap: 20px; }
+.modal-topline .eyebrow { margin-bottom: 16px; }
+.modal-close { width: 42px; height: 42px; border: 1px solid var(--line); background: transparent; font-size: 1.6rem; cursor: pointer; line-height: 1; }
+.detail-modal h2 { font-size: clamp(2rem, 5vw, 2.8rem); margin-bottom: 20px; }
+.modal-content { color: var(--muted); font-size: .94rem; line-height: 1.85; }
+.modal-content p:last-child { margin-bottom: 0; }
+.modal-content strong { color: var(--ink); font-weight: 600; }
+.modal-edit-tip { font-size: .76rem; border-left: 2px solid var(--olive); padding-left: 12px; }
+.modal-done { margin-top: 30px; }
+
+@media (max-width: 760px) {
+  .section-wrap, .site-header, .site-footer { width: min(100% - 40px, var(--wrap)); }
+  .site-header { height: auto; min-height: 75px; align-items: flex-start; padding-block: 20px 15px; gap: 18px; }
+  .site-header nav { justify-content: flex-end; flex-wrap: wrap; gap: 8px 16px; padding-top: 4px; }
+  .site-header nav a { font-size: .72rem; }
+  .hero { grid-template-columns: 1fr; padding-block: 65px 72px; gap: 40px; }
+  .hero-copy { order: 1; }
+  .portrait-frame { order: 0; justify-self: stretch; max-width: 100%; }
+  .portrait-placeholder, .portrait-image { min-height: 0; max-height: 430px; }
+  h1 { font-size: clamp(3.1rem, 13vw, 5rem); }
+  .section-block { padding-block: 70px; }
+  .section-heading { display: block; margin-bottom: 30px; }
+  .section-summary { margin-top: 18px; }
+  .principle-grid { grid-template-columns: 1fr; }
+  .principle-card { min-height: 190px; padding: 22px 0; }
+  .principle-card + .principle-card { border-left: 0; border-top: 1px solid var(--line); padding-left: 0; }
+  .experience-row { grid-template-columns: 28px 1fr 20px; gap: 12px; padding-block: 22px; }
+  .experience-desc { grid-column: 2; grid-row: 2; }
+  .row-arrow { grid-column: 3; grid-row: 1; }
+  .cocktail-grid { grid-template-columns: 1fr; gap: 32px; }
+  .drink-image { aspect-ratio: 16 / 10; }
+  .education-inner { grid-template-columns: 1fr; gap: 30px; padding-block: 55px; }
+  .education-details { grid-template-columns: 1fr 1fr; }
+  .contact-section { padding-block: 75px; }
+}
+@media (max-width: 430px) {
+  .section-wrap, .site-header, .site-footer { width: calc(100% - 32px); }
+  .site-header { display: block; }
+  .site-header nav { justify-content: flex-start; margin-top: 12px; }
+  .education-details { grid-template-columns: 1fr; }
+  .hero-actions, .contact-actions { align-items: flex-start; flex-direction: column; gap: 18px; }
+  .site-footer { flex-wrap: wrap; padding-block: 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
