@@ -312,3 +312,50 @@ button { color: inherit; }
 
 /* Return Contact to the original light page background. */
 .contact-section { background: var(--paper); }
+
+
+/* Layout corrections: full-bleed references, centered mobile hero, tighter contact. */
+.references-section {
+  width: 100%;
+  margin-inline: 0;
+}
+.references-section > .section-wrap {
+  width: min(var(--wrap), calc(100% - 64px));
+  margin-inline: auto;
+}
+.contact-section {
+  padding: 0;
+  background: var(--paper);
+}
+.contact-inner {
+  padding-block: 58px 62px;
+}
+@media (max-width: 760px) {
+  .hero-copy .hero-kicker {
+    display: block;
+    width: 95vw;
+    max-width: 95vw;
+    margin-left: calc((100% - 95vw) / 2);
+    margin-right: 0;
+    text-align: center;
+    white-space: nowrap;
+    font-size: clamp(.57rem, 2.7vw, .72rem);
+    letter-spacing: .055em;
+  }
+  .portrait-frame {
+    width: min(100%, 430px);
+    margin-inline: auto;
+    justify-self: center;
+  }
+  .portrait-image {
+    display: block;
+    width: 100%;
+    margin-inline: auto;
+  }
+  .references-section > .section-wrap {
+    width: calc(100% - 32px);
+  }
+  .contact-inner {
+    padding-block: 42px 46px;
+  }
+}
