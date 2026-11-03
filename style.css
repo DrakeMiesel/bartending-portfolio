@@ -223,3 +223,52 @@ h1 em { color: var(--olive); font-weight: 400; }
 a, button { -webkit-tap-highlight-color: transparent; }
 a:active, button:active { color: inherit; }
 button { touch-action: manipulation; }
+
+
+/* Final palette and mobile typography refinements */
+button { color: inherit; }
+.principle-card, .cocktail-card { color: var(--ink); }
+.principle-card .card-title,
+.principle-card .card-more,
+.cocktail-card strong,
+.cocktail-card .card-more,
+.inline-trigger { color: var(--ink); }
+.principle-card:hover .card-title,
+.cocktail-card:hover strong { color: var(--olive); }
+
+.education-band { background: var(--dark); color: #f5f3ed; }
+.education-band .eyebrow { color: #c0c1a1; }
+.education-band h2 { color: #f5f3ed; }
+.education-details p { color: var(--dark-muted); }
+.education-details strong { color: #f5f3ed; }
+
+.contact-section { background: var(--paper-deep); }
+.contact-inner { padding-block: 100px 110px; }
+.contact-section h2 { max-width: 650px; }
+.contact-copy { max-width: 590px; color: var(--muted); margin: 22px 0 0; }
+.hero-note { font-size: .92rem; line-height: 1.65; }
+.portrait-label { font-size: .68rem; font-weight: 700; letter-spacing: .13em; color: var(--olive); }
+.portrait-label span { padding-inline: .45em; }
+
+@media (max-width: 760px) {
+  .hero-kicker {
+    white-space: nowrap;
+    font-size: clamp(.45rem, 2.15vw, .62rem);
+    letter-spacing: .07em;
+    margin-bottom: 17px;
+  }
+  .hero-note { font-size: 1rem; }
+  .portrait-label {
+    display: block;
+    text-align: center;
+    white-space: nowrap;
+    font-size: clamp(.53rem, 2.55vw, .68rem);
+    letter-spacing: .08em;
+    margin-top: 20px;
+  }
+  .contact-inner { padding-block: 75px; }
+}
+@media (max-width: 430px) {
+  .contact-inner { padding-block: 75px; }
+  .site-header nav { gap: 8px 12px; }
+}
