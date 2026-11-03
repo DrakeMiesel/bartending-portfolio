@@ -272,3 +272,43 @@ button { color: inherit; }
   .contact-inner { padding-block: 75px; }
   .site-header nav { gap: 8px 12px; }
 }
+
+
+/* Latest visual adjustments */
+@media (max-width: 760px) {
+  .hero-kicker {
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    font-size: clamp(.6rem, 3vw, .78rem);
+    letter-spacing: .07em;
+  }
+}
+
+/* References use the same dark palette as Experience. */
+.references-section {
+  background: var(--dark);
+  color: #f5f3ed;
+}
+.references-section .section-heading-light .eyebrow,
+.references-section .eyebrow { color: #c0c1a1; }
+.references-section .section-summary { color: var(--dark-muted); }
+.references-section .quote-track {
+  border-color: #53584e;
+}
+.references-section .quote-placeholder-label { color: #c0c1a1; }
+.references-section .quote-attribution { color: var(--dark-muted); }
+.references-section .quote-attribution span { color: #c0c1a1; }
+.references-section .quote-arrow {
+  border-color: #53584e;
+  color: #f5f3ed;
+}
+.references-section .quote-arrow:hover {
+  background: #f5f3ed;
+  color: var(--dark);
+}
+.references-section .quote-dot { background: #686e61; }
+.references-section .quote-dot.is-active { background: #c0c1a1; }
+
+/* Return Contact to the original light page background. */
+.contact-section { background: var(--paper); }
