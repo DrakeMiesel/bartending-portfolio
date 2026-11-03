@@ -55,3 +55,42 @@ detailDialog.addEventListener("click", (event) => {
 
 // Keep the footer year current automatically.
 document.querySelector("#year").textContent = new Date().getFullYear();
+
+
+// Swipeable friend-reference carousel (native horizontal scrolling).
+const quoteTrack = document.querySelector("#quote-track");
+const quoteDots = [...document.querySelectorAll("[data-quote-index]")];
+const quoteCards = quoteTrack ? [...quoteTrack.querySelectorAll(".quote-card")] : [];
+let activeQuote = 0;
+function showQuote(index) {
+  if (!quoteTrack || !quoteCards.length) return;
+  activeQuote = (index + quoteCards.length) % quoteCards.length;
+  quoteCards[activeQuote].scrollIntoView({ behavior: "smooth", block: "nearest", inline: "start" });
+  quoteDots.forEach((dot, i) => {
+    dot.classList.toggle("is-active", i === activeQuote);
+    if (i === activeQuote) dot.setAttribute("aria-current", "true");
+    else dot.removeAttribute("aria-current");
+  });
+}
+document.querySelectorAll("[data-quote-step]").forEach((button) => {
+  button.addEventListener("click", () => showQuote(activeQuote + Number(button.dataset.quoteStep)));
+});
+quoteDots.forEach((dot) => {
+  dot.addEventListener("click", () => showQuote(Number(dot.dataset.quoteIndex)));
+});
+if (quoteTrack && "IntersectionObserver" in window) {
+  const quoteObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      const index = quoteCards.indexOf(entry.target);
+      if (index < 0) return;
+      activeQuote = index;
+      quoteDots.forEach((dot, i) => {
+        dot.classList.toggle("is-active", i === index);
+        if (i === index) dot.setAttribute("aria-current", "true");
+        else dot.removeAttribute("aria-current");
+      });
+    });
+  }, { root: quoteTrack, threshold: 0.6 });
+  quoteCards.forEach((card) => quoteObserver.observe(card));
+}
