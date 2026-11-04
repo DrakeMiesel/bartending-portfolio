@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=4ad7f96e">
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -19,6 +19,7 @@
       <a href="#approach">Approach</a>
       <a href="#experience">Experience</a>
       <a href="#cocktails">Cocktail notes</a>
+      <a href="#references">A few words</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -26,7 +27,7 @@
   <main id="main">
     <section class="hero section-wrap" id="top">
       <div class="hero-copy">
-        <p class="eyebrow">HOSPITALITY · COCKTAIL CRAFT · MEMORABLE EXPERIENCES</p>
+        <p class="eyebrow hero-kicker">HOSPITALITY · COCKTAIL CRAFT · MEMORABLE EXPERIENCES</p>
         <h1>Good drinks.<br><em>Thoughtful details.</em><br>Great company.</h1>
         <p class="hero-intro">I'm Drake — a hospitality candidate with a genuine curiosity for cocktails, a strong service mindset, and a belief that the details shape the experience.</p>
         <div class="hero-actions">
@@ -34,18 +35,10 @@
           <a class="text-link" href="#contact">Get in touch <span aria-hidden="true">↗</span></a>
         </div>
         <p class="hero-note">Seeking an opportunity to learn, contribute, and grow behind a quality bar.</p>
+        <p class="portrait-label">CURIOUS BY NATURE <span>·</span> ATTENTIVE BY CHOICE</p>
       </div>
       <div class="portrait-frame">
-        <!-- Replace this placeholder with your portrait when ready.
-             Put your photo in images/portrait.jpg, then replace the div below with:
-             <img class="portrait-image" src="images/portrait.jpg" alt="Portrait of Drake Miesel">
-        -->
         <img class="portrait-image" src="images/Hanging_from_rock.png" alt="Portrait of Drake Miesel">
-        <!--<div class="portrait-placeholder" role="img" aria-label="Portrait photo placeholder">-->
-          <span class="placeholder-mark">DM</span>
-          <span class="placeholder-caption">A portrait will go here</span>
-        </div>
-        <div class="portrait-label"><span class="small-dot"></span> Curious by nature. Attentive by choice.</div>
       </div>
     </section>
 
@@ -53,7 +46,18 @@
       <div class="section-wrap intro-band-inner">
         <p class="eyebrow">MY POINT OF VIEW</p>
         <p class="statement">A cocktail can be more than a recipe. It can be a small, memorable experience — shaped by balance, presentation, timing, and the person across the bar.</p>
-        <button class="inline-trigger" data-modal="approach-modal">A little more about my approach <span aria-hidden="true">↗</span></button>
+        <button class="inline-trigger" data-modal="approach-modal">A little more about my approach <span aria-hidden="true">+</span></button>
+      </div>
+    </section>
+
+    <section class="education-band">
+      <div class="section-wrap education-inner">
+        <div><p class="eyebrow">A LITTLE CONTEXT</p><h2>Curious, precise, always learning.</h2></div>
+        <div class="education-details">
+          <p><strong>University of Washington</strong><br>B.S. in Bioengineering · 2026<br>M.S. in Applied Bioengineering · Expected 2027</p>
+          <p><strong>Certifications</strong><br>Washington Food Worker Card<br>Mandatory Alcohol Server Training (MAST)</p>
+          <p><strong>Availability</strong><br>Evenings and weekends, including late-night shifts.</p>
+        </div>
       </div>
     </section>
 
@@ -69,17 +73,17 @@
         <button class="principle-card" data-modal="craft-modal">
           <span class="card-number">01</span><span class="card-title">The craft</span>
           <span class="card-copy">Flavor, aroma, texture, glassware, ice, and presentation.</span>
-          <span class="card-more">Explore <span aria-hidden="true">↗</span></span>
+          <span class="card-more">Explore <span aria-hidden="true">+</span></span>
         </button>
         <button class="principle-card" data-modal="hospitality-modal">
           <span class="card-number">02</span><span class="card-title">The guest</span>
           <span class="card-copy">Listening, noticing the details, and helping people feel welcome.</span>
-          <span class="card-more">Explore <span aria-hidden="true">↗</span></span>
+          <span class="card-more">Explore <span aria-hidden="true">+</span></span>
         </button>
         <button class="principle-card" data-modal="learning-modal">
           <span class="card-number">03</span><span class="card-title">The mindset</span>
           <span class="card-copy">Staying composed, learning quickly, and improving through feedback.</span>
-          <span class="card-more">Explore <span aria-hidden="true">↗</span></span>
+          <span class="card-more">Explore <span aria-hidden="true">+</span></span>
         </button>
       </div>
     </section>
@@ -98,19 +102,19 @@
             <span class="experience-index">01</span>
             <span class="experience-main"><strong>Restaurant service</strong><small>Taco Bell · One year</small></span>
             <span class="experience-desc">Customer service, communication, accuracy, teamwork</span>
-            <span class="row-arrow" aria-hidden="true">↗</span>
+            <span class="row-arrow" aria-hidden="true">+</span>
           </button>
           <button class="experience-row" data-modal="cocktail-modal">
             <span class="experience-index">02</span>
             <span class="experience-main"><strong>Independent cocktail practice</strong><small>Personal practice · Six years</small></span>
             <span class="experience-desc">Experimentation, flavor, presentation, curiosity</span>
-            <span class="row-arrow" aria-hidden="true">↗</span>
+            <span class="row-arrow" aria-hidden="true">+</span>
           </button>
           <button class="experience-row" data-modal="gymnastics-modal">
             <span class="experience-index">03</span>
             <span class="experience-main"><strong>Collegiate gymnastics</strong><small>University of Washington</small></span>
             <span class="experience-desc">Composure, discipline, coachability, accountability</span>
-            <span class="row-arrow" aria-hidden="true">↗</span>
+            <span class="row-arrow" aria-hidden="true">+</span>
           </button>
         </div>
       </div>
@@ -127,40 +131,72 @@
       <div class="cocktail-grid">
         <button class="cocktail-card" data-modal="drink-one-modal">
           <div class="drink-image drink-image-one"><span class="image-placeholder-label">Add cocktail photo</span></div>
-          <div class="cocktail-card-text"><span class="eyebrow">COCKTAIL NOTE 01</span><strong>A drink worth remembering</strong><span class="card-more">View the story <span aria-hidden="true">↗</span></span></div>
+          <div class="cocktail-card-text"><span class="eyebrow">COCKTAIL NOTE 01</span><strong>A drink worth remembering</strong><span class="card-more">View the story <span aria-hidden="true">+</span></span></div>
         </button>
         <button class="cocktail-card" data-modal="drink-two-modal">
           <div class="drink-image drink-image-two"><span class="image-placeholder-label">Add cocktail photo</span></div>
-          <div class="cocktail-card-text"><span class="eyebrow">COCKTAIL NOTE 02</span><strong>Balance &amp; discovery</strong><span class="card-more">View the story <span aria-hidden="true">↗</span></span></div>
+          <div class="cocktail-card-text"><span class="eyebrow">COCKTAIL NOTE 02</span><strong>Balance &amp; discovery</strong><span class="card-more">View the story <span aria-hidden="true">+</span></span></div>
         </button>
         <button class="cocktail-card" data-modal="drink-three-modal">
           <div class="drink-image drink-image-three"><span class="image-placeholder-label">Add cocktail photo</span></div>
-          <div class="cocktail-card-text"><span class="eyebrow">COCKTAIL NOTE 03</span><strong>Presentation matters</strong><span class="card-more">View the story <span aria-hidden="true">↗</span></span></div>
+          <div class="cocktail-card-text"><span class="eyebrow">COCKTAIL NOTE 03</span><strong>Presentation matters</strong><span class="card-more">View the story <span aria-hidden="true">+</span></span></div>
         </button>
       </div>
       <p class="fine-print">These are personal experiments, not professional bar-service experience. The stories can be updated to describe your actual drinks and process.</p>
     </section>
 
-    <section class="education-band">
-      <div class="section-wrap education-inner">
-        <div><p class="eyebrow">A LITTLE CONTEXT</p><h2>Curious, precise, always learning.</h2></div>
-        <div class="education-details">
-          <p><strong>University of Washington</strong><br>B.S. in Bioengineering · 2026<br>M.S. in Applied Bioengineering · Expected 2027</p>
-          <p><strong>Certifications</strong><br>Washington Food Worker Card<br>Mandatory Alcohol Server Training (MAST)</p>
-          <p><strong>Availability</strong><br>Evenings and weekends, including late-night shifts.</p>
+    <section class="section-block references-section" id="references">
+      <div class="section-wrap">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">04 / A FEW WORDS FROM OTHERS</p>
+          <h2>Good company says it best.</h2>
         </div>
+        <p class="section-summary">A few short notes from people who know me. These are temporary placeholders and will be replaced with genuine references before the site is shared.</p>
+      </div>
+      <div class="quote-carousel" aria-label="Friend references">
+        <div class="quote-track" id="quote-track" tabindex="0">
+          <article class="quote-card">
+            <p class="quote-placeholder-label">PLACEHOLDER — NOT A REAL TESTIMONIAL</p>
+            <blockquote>“Add a short, genuine note from a friend about your character, reliability, or the way you make people feel welcome.”</blockquote>
+            <p class="quote-attribution">Friend’s name <span>·</span> Relationship</p>
+          </article>
+          <article class="quote-card">
+            <p class="quote-placeholder-label">PLACEHOLDER — NOT A REAL TESTIMONIAL</p>
+            <blockquote>“A second reference could speak to teamwork, staying calm under pressure, or being someone others can count on.”</blockquote>
+            <p class="quote-attribution">Friend’s name <span>·</span> Relationship</p>
+          </article>
+          <article class="quote-card">
+            <p class="quote-placeholder-label">PLACEHOLDER — NOT A REAL TESTIMONIAL</p>
+            <blockquote>“A final note might describe your curiosity, attention to detail, or enthusiasm for bringing people together.”</blockquote>
+            <p class="quote-attribution">Friend’s name <span>·</span> Relationship</p>
+          </article>
+        </div>
+        <div class="quote-controls">
+          <button class="quote-arrow" type="button" data-quote-step="-1" aria-label="Previous reference">←</button>
+          <div class="quote-dots" aria-label="Choose a reference">
+            <button class="quote-dot is-active" type="button" data-quote-index="0" aria-label="Show reference 1" aria-current="true"></button>
+            <button class="quote-dot" type="button" data-quote-index="1" aria-label="Show reference 2"></button>
+            <button class="quote-dot" type="button" data-quote-index="2" aria-label="Show reference 3"></button>
+          </div>
+          <button class="quote-arrow" type="button" data-quote-step="1" aria-label="Next reference">→</button>
+        </div>
+      </div>
       </div>
     </section>
 
-    <section class="section-wrap contact-section" id="contact">
-      <p class="eyebrow">04 / CONTACT</p>
-      <h2>Let’s start a conversation.</h2>
-      <p class="contact-copy">I’d welcome the opportunity to contribute to a thoughtful hospitality team, keep learning, and help create a great guest experience.</p>
-      <div class="contact-actions">
-        <a class="button button-dark" href="mailto:dm13sel@gmail.com">Email me <span aria-hidden="true">↗</span></a>
-        <a class="text-link" href="tel:+14255518283">(425) 551-8283</a>
+
+
+    <section class="contact-section" id="contact">
+      <div class="section-wrap contact-inner">
+        <p class="eyebrow">05 / CONTACT</p>
+        <h2>Let’s start a conversation.</h2>
+        <p class="contact-copy">I’d welcome the opportunity to contribute to a thoughtful hospitality team, keep learning, and help create a great guest experience.</p>
+        <div class="contact-actions">
+          <a class="button button-dark" href="mailto:dm13sel@gmail.com">Email me <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="tel:+14255518283">(425) 551-8283</a>
+        </div>
       </div>
-      <p class="privacy-note">This page is public. Only keep contact details here that you are comfortable sharing with anyone who has the link.</p>
     </section>
   </main>
 
