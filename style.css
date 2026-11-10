@@ -359,3 +359,27 @@ button { color: inherit; }
     padding-block: 42px 46px;
   }
 }
+
+
+/* Cocktail media: preserve the original portrait-oriented phone framing. */
+.drink-image {
+  aspect-ratio: 4 / 5;
+  background: var(--paper-deep);
+}
+.drink-video,
+.drink-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.drink-video {
+  background: var(--paper-deep);
+}
+@media (max-width: 760px) {
+  .drink-image {
+    aspect-ratio: 4 / 5;
+    max-height: 560px;
+  }
+}
