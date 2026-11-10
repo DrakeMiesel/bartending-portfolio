@@ -372,10 +372,16 @@ button { color: inherit; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
 }
 .drink-video {
+  /* Anchor to the bottom so any excess crop comes from the top of the frame. */
+  object-position: center bottom;
   background: var(--paper-deep);
+}
+.drink-photo {
+  /* A modest 30% zoom, clipped by the existing overflow-hidden image frame. */
+  transform: scale(1.3);
+  transform-origin: center center;
 }
 @media (max-width: 760px) {
   .drink-image {
