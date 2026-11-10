@@ -94,3 +94,31 @@ if (quoteTrack && "IntersectionObserver" in window) {
   }, { root: quoteTrack, threshold: 0.6 });
   quoteCards.forEach((card) => quoteObserver.observe(card));
 }
+
+
+// Load cocktail videos only as they approach the viewport, then pause offscreen.
+const cocktailVideos = [...document.querySelectorAll(".drink-video[data-src]")];
+if ("IntersectionObserver" in window) {
+  const videoObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const video = entry.target;
+      if (entry.isIntersecting) {
+        if (!video.src) {
+          video.src = video.dataset.src;
+          video.load();
+        }
+        video.play().catch(() => {
+          // Autoplay can be restricted by browser or device settings.
+        });
+      } else {
+        video.pause();
+      }
+    });
+  }, { rootMargin: "180px 0px", threshold: 0.05 });
+  cocktailVideos.forEach((video) => videoObserver.observe(video));
+} else {
+  cocktailVideos.forEach((video) => {
+    video.src = video.dataset.src;
+    video.load();
+  });
+}
