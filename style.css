@@ -379,7 +379,7 @@ button { color: inherit; }
    * portrait frame. With object-fit: cover, the excess image is cropped above.
    */
   object-fit: cover !important;
-  object-position: 50% 100% !important;
+  object-position: 100% 50% !important;
   align-self: stretch;
   min-width: 0;
   min-height: 0;
