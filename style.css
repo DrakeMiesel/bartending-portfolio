@@ -374,8 +374,15 @@ button { color: inherit; }
   object-fit: cover;
 }
 .drink-video {
-  /* Anchor to the bottom so any excess crop comes from the top of the frame. */
-  object-position: center bottom;
+  /*
+   * Keep the bottom edge of the source video aligned with the bottom of the
+   * portrait frame. With object-fit: cover, the excess image is cropped above.
+   */
+  object-fit: cover !important;
+  object-position: 50% 100% !important;
+  align-self: stretch;
+  min-width: 0;
+  min-height: 0;
   background: var(--paper-deep);
 }
 .drink-photo {
