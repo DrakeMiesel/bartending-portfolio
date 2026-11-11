@@ -359,3 +359,40 @@ button { color: inherit; }
     padding-block: 42px 46px;
   }
 }
+
+
+/* Cocktail media: preserve the original portrait-oriented phone framing. */
+.drink-image {
+  aspect-ratio: 4 / 5;
+  background: var(--paper-deep);
+}
+.drink-video,
+.drink-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.drink-video {
+  /*
+   * Keep the bottom edge of the source video aligned with the bottom of the
+   * portrait frame. With object-fit: cover, the excess image is cropped above.
+   */
+  object-fit: cover !important;
+  object-position: 67% 33% !important;
+  align-self: stretch;
+  min-width: 0;
+  min-height: 0;
+  background: var(--paper-deep);
+}
+.drink-photo {
+  /* A modest 30% zoom, clipped by the existing overflow-hidden image frame. */
+  transform: scale(1.3);
+  transform-origin: center center;
+}
+@media (max-width: 760px) {
+  .drink-image {
+    aspect-ratio: 4 / 5;
+    max-height: 560px;
+  }
+}
